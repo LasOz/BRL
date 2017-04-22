@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 72773825}
   - component: {fileID: 72773824}
+  - component: {fileID: 72773823}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -107,6 +108,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &72773823
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72773822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3fd6806406aaf074398740556631d531, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &72773824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -138,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: ad3fe30af5c6af04f886268e693e364f, type: 3}
+  m_Sprite: {fileID: 21300064, guid: ad3fe30af5c6af04f886268e693e364f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -404,7 +422,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
       propertyPath: m_Name
@@ -535,7 +553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
       propertyPath: m_Name
@@ -648,7 +666,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
       propertyPath: m_Name
@@ -944,7 +962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f11147f770103f418f5e4b0ad0023e1, type: 3}
