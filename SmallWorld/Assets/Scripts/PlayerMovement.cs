@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    float thrustx;
-    public float thrusty = 1;
-    float thrustz;
+    float HThrust;
+    float VThrust;
+    float JumpForce = 4f;
+    float maxSpeed = 5;
+    float ray = 0.1f;
     Rigidbody rb;
-    
 
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    void Start ()
     {
         rb = GetComponent<Rigidbody>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update ()
     {
-        thrustx = Input.GetAxis("Horizontal") * Time.deltaTime * 1024.0f;
-        thrustz = Input.GetAxis("Vertical") * Time.deltaTime * 1024.0f;
         
-        //transform.Translate(x, 0, z);
-        rb.AddForce(transform.right * thrustx);
-        rb.AddForce(transform.up * thrusty);
-        rb.AddForce(transform.forward * thrustz);
-        if (Input.GetButton("Jump"))
+        HThrust = Input.GetAxis("Horizontal") * Time.deltaTime * 1024.0f;
+        VThrust = Input.GetAxis("Vertical") * Time.deltaTime * 1024.0f;
+        rb.AddForce(transform.right * HThrust);
+        rb.AddForce(transform.forward * VThrust);
+        if (Input.GetButton("Jump") && Physics.Raycast(transform.position, -Vector3.up, ray))
         {
-            rb.AddForce(transform.up * thrusty, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
     }
 }
