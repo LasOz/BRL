@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    
+    float thrustx;
+    public float thrusty = 1;
+    float thrustz;
+    Rigidbody rb;
     
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 7.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 7.0f;
+        thrustx = Input.GetAxis("Horizontal") * Time.deltaTime * 1024.0f;
+        thrustz = Input.GetAxis("Vertical") * Time.deltaTime * 1024.0f;
         
-        
-
-        
-        transform.Translate(x, 0, z);
+        //transform.Translate(x, 0, z);
+        rb.AddForce(transform.right * thrustx);
+        rb.AddForce(transform.up * thrusty);
+        rb.AddForce(transform.forward * thrustz);
+        if (Input.GetButton("Jump"))
+        {
+            rb.AddForce(transform.up * thrusty, ForceMode.Impulse);
+        }
     }
 }
