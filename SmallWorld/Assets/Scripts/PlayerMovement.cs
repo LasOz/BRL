@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    float HThrust;
-    float VThrust;
+    public float HThrust;
+    public float VThrust;
     float JumpForce = 4f;
     float maxSpeed = 5;
     float ray = 0.1f;
     Rigidbody rb;
+    
 
 
     // Use this for initialization
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
+        
 	}
 
     // Update is called once per frame
@@ -30,5 +32,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
+        
     }
 }
