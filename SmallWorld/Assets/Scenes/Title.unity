@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c73f711383e75a4dbbe617072ae8bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: Debug_Room
+  destination: hhhh
 --- !u!82 &431777989
 AudioSource:
   m_ObjectHideFlags: 0

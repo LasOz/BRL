@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Debug_Room.unity
+- path: Assets/Scenes/underg.unity
   isLoaded: 1
   isActive: 1

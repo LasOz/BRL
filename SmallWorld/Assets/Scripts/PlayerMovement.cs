@@ -63,9 +63,9 @@ public class PlayerMovement : MonoBehaviour {
         rb.AddForce(transform.right * HThrust);
         rb.AddForce(transform.forward * VThrust);
         if (Input.GetButtonDown("Jump") && InAir == false)
-        {
-            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-        }     
+            {
+                rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            }     
         }
     }
 

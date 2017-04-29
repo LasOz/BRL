@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
   - enabled: 1
     path: Assets/Scenes/Debug_Room.unity
+  - enabled: 1
+    path: Assets/Scenes/hhhh.unity
